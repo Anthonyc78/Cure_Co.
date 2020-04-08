@@ -1,28 +1,60 @@
-﻿using System.Collections;
+﻿//Youtube video: Displaying UI with OnMouseOver
+//Video Link: https://www.youtube.com/watch?v=5BobLzmqhNE
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;// Required when using Event data.
 
-public class ButtonControl, IPointerEnterHandler, IPointerExitHandler 
- {
-     private GameObject childText = null; //  or make public and drag
-void Start()
+public class MenuText : MonoBehaviour
 {
-    Text text = GetComponentInChildren<Text>();
-    if (text != null)
+    public string myString;
+    public Text myText;
+    public float fadeTime;
+    public bool displayInfo;
+
+    //Use This for initialization
+    void Start()
     {
-        childText = text.gameObject;
-        childText.SetActive(false);
+        myText = GameObject.Find("Text").GetComponent<Text>();
+        myText.color = Color.clear;
+        //Screen.showCursor = false;
+        //Screen.lockCursor = true;
+    }
+
+    //Update is called once per frame
+    void Update()
+    {
+        FadeText ();
+
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    Screen.lockCursor = false;
+        //}
+    }
+
+    void OnMouseOver()
+    {
+        displayInfo = true;
+    }
+
+    void OnMouseExit()
+    {
+        displayInfo = false;
+    }
+
+    void FadeText()
+    {
+        //if displayInfo is true, display info
+        if (displayInfo)
+        {
+            myText.text = myString;
+            //set the color of the text from clear to black with a fade in
+            myText.color = Color.Lerp(myText.color, Color.black, fadeTime * Time.deltaTime);
+        }
+        else
+        {
+            myText.color = Color.Lerp(myText.color, Color.clear, fadeTime * Time.deltaTime);
+        }
     }
 }
-public void OnPointerEnter(EventSystems.PointerEventData eventData)
-{
-    childText.SetActive(true);
-}
-public void OnPointerExit(EventSystems.PointerEventData eventData)
-{
-    childText.SetActive(false);
-}
- }
-
