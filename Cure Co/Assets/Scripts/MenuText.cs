@@ -13,6 +13,10 @@ public class MenuText : MonoBehaviour
     public float fadeTime;
     public bool displayInfo;
 
+    [SerializeField] public CanvasGroup canvas1;
+
+    [SerializeField] public CanvasGroup canvas2;
+
     //Use This for initialization
     void Start()
     {
@@ -50,7 +54,7 @@ public class MenuText : MonoBehaviour
         {
             myText.text = myString;
             //set the color of the text from clear to black with a fade in
-            myText.color = Color.Lerp(myText.color, Color.black, fadeTime * Time.deltaTime);
+            canvasGroup.alpha = 0f; //this makes everything transparent
         }
         else
         {
