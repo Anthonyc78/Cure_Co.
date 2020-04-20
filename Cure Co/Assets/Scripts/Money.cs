@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿// https://answers.unity.com/questions/134474/add-to-score-every-second.html
+// script bassed off the above link
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
