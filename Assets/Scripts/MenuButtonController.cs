@@ -6,20 +6,17 @@ using TMPro;
 public class MenuButtonController : MonoBehaviour
 {
     [SerializeField] GameObject targetObject;
-    [SerializeField] GameObject SetMeActive;
+    [SerializeField] GameObject ShowMeOnClick;
     // Start is called before the first frame update
     void Start()
     {
 
     }
-    public void SetGOActive()
+    public void SetActiveOnCLick()
     {
-        SetMeActive.SetActive(true);
+        ShowMeOnClick.SetActive(true);
     }
-    private void OnMouseOver()
-    {
-        targetObject.SetActive(true);
-    }
+    
     private void OnMouseEnter()
     {
         targetObject.SetActive(true);

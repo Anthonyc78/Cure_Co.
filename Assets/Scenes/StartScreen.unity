@@ -133,8 +133,8 @@ GameObject:
   - component: {fileID: 38518300}
   - component: {fileID: 38518299}
   - component: {fileID: 38518298}
-  - component: {fileID: 38518301}
   - component: {fileID: 38518302}
+  - component: {fileID: 38518303}
   m_Layer: 5
   m_Name: hardButton
   m_TagString: Untagged
@@ -204,7 +204,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 38518299}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1317210213}
+        m_MethodName: ToHardLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &38518299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,20 +252,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38518296}
   m_CullTransparentMesh: 0
---- !u!114 &38518301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38518296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9063b64c05664c04c9bf0188e825874a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 1527424000}
-  SetMeActive: {fileID: 0}
 --- !u!61 &38518302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -281,6 +278,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 116.72758, y: 26.572235}
   m_EdgeRadius: 0
+--- !u!114 &38518303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38518296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dda970f1a337394d981a6cf0d16891d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1527424000}
+  ShowMeOnClick: {fileID: 0}
 --- !u!1 &182461577
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: a normal virus outbreak
+  m_text: A normal virus outbreak
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -603,8 +614,8 @@ GameObject:
   - component: {fileID: 479303354}
   - component: {fileID: 479303353}
   - component: {fileID: 479303352}
-  - component: {fileID: 479303355}
   - component: {fileID: 479303356}
+  - component: {fileID: 479303357}
   m_Layer: 5
   m_Name: epicButton
   m_TagString: Untagged
@@ -674,7 +685,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 479303353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1317210213}
+        m_MethodName: ToHardLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &479303353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,20 +733,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479303350}
   m_CullTransparentMesh: 0
---- !u!114 &479303355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 479303350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9063b64c05664c04c9bf0188e825874a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 941463271}
-  SetMeActive: {fileID: 0}
 --- !u!61 &479303356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -751,6 +759,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 116.72758, y: 26.572235}
   m_EdgeRadius: 0
+--- !u!114 &479303357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479303350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dda970f1a337394d981a6cf0d16891d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 941463271}
+  ShowMeOnClick: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,8 +868,8 @@ GameObject:
   - component: {fileID: 701434520}
   - component: {fileID: 701434519}
   - component: {fileID: 701434518}
-  - component: {fileID: 701434521}
   - component: {fileID: 701434522}
+  - component: {fileID: 701434523}
   m_Layer: 5
   m_Name: startButton
   m_TagString: Untagged
@@ -918,7 +940,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 701434521}
+      - m_Target: {fileID: 701434523}
         m_MethodName: SetGOActive
         m_Mode: 1
         m_Arguments:
@@ -965,20 +987,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701434516}
   m_CullTransparentMesh: 0
---- !u!114 &701434521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 701434516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9063b64c05664c04c9bf0188e825874a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 1483871813}
-  SetMeActive: {fileID: 1578892042}
 --- !u!61 &701434522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1005,6 +1013,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 116.72758, y: 26.572235}
   m_EdgeRadius: 0
+--- !u!114 &701434523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701434516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dda970f1a337394d981a6cf0d16891d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1483871813}
+  ShowMeOnClick: {fileID: 1578892042}
 --- !u!1 &725989308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,7 +1510,7 @@ RectTransform:
   - {fileID: 1199021925}
   - {fileID: 1578892043}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1507,8 +1529,8 @@ GameObject:
   - component: {fileID: 1087478864}
   - component: {fileID: 1087478863}
   - component: {fileID: 1087478862}
-  - component: {fileID: 1087478865}
   - component: {fileID: 1087478866}
+  - component: {fileID: 1087478867}
   m_Layer: 5
   m_Name: normButton
   m_TagString: Untagged
@@ -1578,7 +1600,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1087478863}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1317210213}
+        m_MethodName: ToNormalLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1087478863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,20 +1648,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087478860}
   m_CullTransparentMesh: 0
---- !u!114 &1087478865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087478860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9063b64c05664c04c9bf0188e825874a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 182461577}
-  SetMeActive: {fileID: 0}
 --- !u!61 &1087478866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1655,6 +1674,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 116.72758, y: 26.572235}
   m_EdgeRadius: 0
+--- !u!114 &1087478867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087478860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dda970f1a337394d981a6cf0d16891d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 182461577}
+  ShowMeOnClick: {fileID: 0}
 --- !u!1 &1169819784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,7 +1983,50 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1317210212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1317210214}
+  - component: {fileID: 1317210213}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1317210213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317210212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9080409ff3b39945afa737a7d2a58e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1317210214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317210212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 245.44083, y: 161.95071, z: -121.77808}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1345604801
 GameObject:
@@ -2473,7 +2549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'an unpredicted virus outbreak
+  m_text: 'An unpredicted virus outbreak
 
 '
   m_isRightToLeft: 0
@@ -2663,8 +2739,8 @@ GameObject:
   - component: {fileID: 1715984701}
   - component: {fileID: 1715984700}
   - component: {fileID: 1715984699}
-  - component: {fileID: 1715984702}
   - component: {fileID: 1715984703}
+  - component: {fileID: 1715984704}
   m_Layer: 5
   m_Name: exitButton
   m_TagString: Untagged
@@ -2734,7 +2810,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1715984700}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1317210213}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1715984700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2771,20 +2858,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715984697}
   m_CullTransparentMesh: 0
---- !u!114 &1715984702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715984697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9063b64c05664c04c9bf0188e825874a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 1459042827}
-  SetMeActive: {fileID: 0}
 --- !u!61 &1715984703
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2811,6 +2884,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 116.72758, y: 26.572235}
   m_EdgeRadius: 0
+--- !u!114 &1715984704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715984697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dda970f1a337394d981a6cf0d16891d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1459042827}
+  ShowMeOnClick: {fileID: 0}
 --- !u!1 &1854580302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,8 +2910,8 @@ GameObject:
   - component: {fileID: 1854580306}
   - component: {fileID: 1854580305}
   - component: {fileID: 1854580304}
-  - component: {fileID: 1854580307}
   - component: {fileID: 1854580308}
+  - component: {fileID: 1854580309}
   m_Layer: 5
   m_Name: infoButton
   m_TagString: Untagged
@@ -2894,7 +2981,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1854580305}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1317210213}
+        m_MethodName: ToHowTo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1854580305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2931,20 +3029,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854580302}
   m_CullTransparentMesh: 0
---- !u!114 &1854580307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854580302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9063b64c05664c04c9bf0188e825874a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 1917940275}
-  SetMeActive: {fileID: 0}
 --- !u!61 &1854580308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2971,6 +3055,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 116.72758, y: 26.572235}
   m_EdgeRadius: 0
+--- !u!114 &1854580309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854580302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dda970f1a337394d981a6cf0d16891d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1917940275}
+  ShowMeOnClick: {fileID: 0}
 --- !u!1 &1892928279
 GameObject:
   m_ObjectHideFlags: 0
