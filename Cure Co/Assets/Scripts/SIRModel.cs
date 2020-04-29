@@ -22,7 +22,6 @@ public class SIRModel : MonoBehaviour
         immune = (int)(population * (PercentImmune / 100));
         infected = (int)(population * (PercentInfected / 100));
         susceptible = (int)(population * (PercentSusceptible / 100));
-
     }
 
     // Update is called once per frame
