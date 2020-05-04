@@ -560,9 +560,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\tThe virus spread without hesitation and you sprong into action to prevent
-    it. trying to surpress and contain its spread by any means necessary. To your
+    it. Trying to surpress and contain its spread by any means necessary. To your
     releif you had done it. you had successfully contained the virus but not with
-    out some costs. many people have been affected by this disaster and now have
+    out some costs. Many people have been affected by this disaster and now have
     to band together and recover. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
