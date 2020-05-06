@@ -259,9 +259,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You are the part of the C.D.C. in the Disease Control Unit and are in
-    charge of helping prevent and stomp out any diseases that spread through the
-    country. '
+  m_text: "Story: \nYou are the part of the C.D.C. in the Disease Control Unit and
+    are in charge of helping prevent and stomp out any diseases that spread through
+    the country. \n\nControls:\n\tMain Menu: choose your game difficulty by selecting
+    \"Start\" then clicking on one of the 3 difficulty settings. Each setting increases
+    the starting infected count and infection rate. \n\n\tIn game: The Operations
+    button is used to bring up what can be done in each sector. by clicking on the
+    sector you can decide weather to Quarantine or Treat that area."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -289,8 +293,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 49
+  m_fontSizeBase: 49
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -299,7 +303,7 @@ MonoBehaviour:
   m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 2
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -330,12 +334,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 647552567}
-    characterCount: 156
+    characterCount: 528
     spriteCount: 0
-    spaceCount: 29
-    wordCount: 31
+    spaceCount: 97
+    wordCount: 93
     linkCount: 0
-    lineCount: 2
+    lineCount: 13
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
