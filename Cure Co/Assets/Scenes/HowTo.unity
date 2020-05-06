@@ -259,9 +259,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You are the part of the C.D.C. in the Disease Control Unit and are in
-    charge of helping prevent and stomp out any diseases that spread through the
-    country. '
+  m_text: "Story: \nYou are the part of the C.D.C. in the Disease Control Unit and
+    are in charge of helping prevent and stomp out any diseases that spread through
+    the country. \n\nControls:\n\tMain Menu: choose your game difficulty by selecting
+    \"Start\" then clicking on one of the 3 difficulty settings. Each setting increases
+    the starting infected count and infection rate. \n\n\tIn game: The Operations
+    button is used to bring up what can be done in each sector. by clicking on the
+    sector you can decide weather to Quarantine or Treat that area."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -289,8 +293,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 49
+  m_fontSizeBase: 49
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -299,7 +303,7 @@ MonoBehaviour:
   m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 2
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -330,12 +334,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 647552567}
-    characterCount: 156
+    characterCount: 528
     spriteCount: 0
-    spaceCount: 29
-    wordCount: 31
+    spaceCount: 97
+    wordCount: 93
     linkCount: 0
-    lineCount: 2
+    lineCount: 13
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -601,49 +605,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1317210212
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1317210214}
-  - component: {fileID: 1317210213}
-  m_Layer: 0
-  m_Name: SceneLoader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1317210213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317210212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9080409ff3b39945afa737a7d2a58e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1317210214
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317210212}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 245.44083, y: 161.95071, z: -121.77808}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1395244380
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +691,6 @@ GameObject:
   - component: {fileID: 1715984701}
   - component: {fileID: 1715984700}
   - component: {fileID: 1715984699}
-  - component: {fileID: 1715984703}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -801,7 +761,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1317210213}
+      - m_Target: {fileID: 2083452780}
         m_MethodName: ToTitleScreen
         m_Mode: 1
         m_Arguments:
@@ -848,32 +808,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715984697}
   m_CullTransparentMesh: 0
---- !u!61 &1715984703
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715984697}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.23889542, y: -0.119522095}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 437.9, y: 150.41}
-  m_EdgeRadius: 0
 --- !u!1 &2000045521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,3 +963,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000045521}
   m_CullTransparentMesh: 0
+--- !u!1001 &2083452779
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 245.44083
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 161.95071
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -121.77808
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547580, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152265065547582, guid: 20ba08febb3ad7d448d41c18b05496f6,
+        type: 3}
+      propertyPath: m_Name
+      value: SceneLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 20ba08febb3ad7d448d41c18b05496f6, type: 3}
+--- !u!114 &2083452780 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4649152265065547583, guid: 20ba08febb3ad7d448d41c18b05496f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2083452779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9080409ff3b39945afa737a7d2a58e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
