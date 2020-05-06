@@ -2,14 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SubInfector : MonoBehaviour
 {
     [SerializeField] int population = 200000;
-    [Range(0f, 100f)] private float PercentSusceptible = 0f;
-    [Range(0f, 100f)] private float PercentInfected = 0f;
-    [Range(0f, 100f)] private float PercentDead = 0f;
-    [Range(0f, 100f)] private float PercentCured = 0f;
+    [Range(0f, 1f)] private float PercentSusceptible = 0f;
+    [SerializeField] [Range(0f, 1f)] private float PercentInfected = 0f;
+    [SerializeField] GameObject InfectedFilter;
+    [SerializeField] [Range(0f, 1f)] private float PercentDead = 0f;
+    [SerializeField] GameObject DeadFilter;
+    [Range(0f, 1f)] private float PercentCured = 0f;
     private int susceptible = 0;
     private int infected = 0;
     private float infectedBuildUp = 0f;
@@ -23,12 +26,13 @@ public class SubInfector : MonoBehaviour
     {
         infectedBuildUp += infected * infectiousness;
         infected = (int)infectedBuildUp;
+        InfectedFilter.GetComponent<Image>().color = new Color (1, 0, 0, PercentInfected);
+        DeadFilter.GetComponent<Image>().color = new Color(0, 0, 0, PercentDead);
     }
 
-    internal void SetValues(float percentInfected)
+    internal void SetValues(int percentInfected)
     {
-        PercentInfected = percentInfected;
-        infected = (int)(population * (PercentInfected/100));
+        infected = percentInfected;
     }
 
     internal void StartValues(float infectiousness, float severity)
