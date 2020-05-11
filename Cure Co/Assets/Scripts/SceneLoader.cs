@@ -5,16 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    void Start()
-    {
-
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void ToTitleScreen()
     {
         SceneManager.LoadScene(0);
@@ -39,9 +29,13 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void ToWin()
+    {
+        SceneManager.LoadScene(5);
+    }
     public void ToGameOver()
     {
-        //SceneManager.LoadScene("LossScreen");
+        SceneManager.LoadScene(6);
     }
     public void Quit()
     {

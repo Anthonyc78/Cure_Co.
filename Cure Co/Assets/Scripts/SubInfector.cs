@@ -19,6 +19,7 @@ public class SubInfector : MonoBehaviour
     private int dead = 0;
     private int cured = 0;
     private float infectiousness;
+    private float decay;
     private float severity;
 
     // Update is called once per frame
@@ -27,16 +28,38 @@ public class SubInfector : MonoBehaviour
         infectedBuildUp += infected * infectiousness;
         infected = (int)infectedBuildUp;
         InfectedFilter.GetComponent<Image>().color = new Color (1, 0, 0, PercentInfected);
-        DeadFilter.GetComponent<Image>().color = new Color(0, 0, 0, PercentDead);
+        DeadFilter.GetComponent<Image>().color = new Color (0, 0, 0, PercentDead);
     }
 
-    internal void SetValues(int percentInfected)
+    internal void SetValues(int i)
     {
-        infected = percentInfected;
+        infected = i;
     }
 
-    internal void StartValues(float infectiousness, float severity)
+    internal void StartValues(float i, float d, float s)
     {
-        throw new NotImplementedException();
+        infectiousness = i;
+        decay = d;
+        severity = s;
+    }
+
+    internal int GetInfected()
+    {
+        return infected;
+    }
+
+    internal int GetHealthy()
+    {
+        return susceptible;
+    }
+
+    internal int GetDead()
+    {
+        return dead;
+    }
+
+    internal int GetCured()
+    {
+        return cured;
     }
 }
