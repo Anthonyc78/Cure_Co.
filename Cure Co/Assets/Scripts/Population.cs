@@ -4,14 +4,32 @@ using UnityEngine;
 
 public class Population : MonoBehaviour
 {
-    [SerializeField] int Midwest = 68800000; // 68.8 mil
-    [SerializeField] int Northeast = 56000000; // 56 mil
-    [SerializeField] int Southeast = 92900000; // 92.9 mil
-    [SerializeField] int Southwest = 43000000; // 43 mil
-    [SerializeField] int West = 67700000; // 67.7 mil
-    [SerializeField] int Total = 328400000; // 328.4 mil
-}
+    public float Midwest = 68800000; // 68.8 mil
+    public float Northeast = 56000000; // 56 mil
+    public float Southeast = 92900000; // 92.9 mil
+    public float Southwest = 43000000; // 43 mil
+    public float West = 67700000; // 67.7 mil
+    public float Total = 328400000; // 328.4 mil
+    [SerializeField] float score;
+    public float timer;
+    public int counter = 1;
 
+    private void Update()
+    {
+        score += Total/counter;
+
+        timer += Time.deltaTime;
+        if (timer > 5f)
+        {
+            //counter is going to be used to divide the score
+            counter += 1;
+            // reset the timer
+            timer = 0;
+            
+        }
+        
+    }
+}
 // all numbers are rounded to the nearest 100,000
 // https://worldpopulationreview.com/states/
 
