@@ -32,21 +32,33 @@ public class SubInfector : MonoBehaviour
     {
         UpdateStats();
         UpdatePercents();
-        InfectedFilter.GetComponent<Image>().color = new Color (1, 0, 0, PercentInfected);
-        DeadFilter.GetComponent<Image>().color = new Color (0, 0, 0, PercentDead);
+        UpdateFilters();
     }
+
+    private void UpdateFilters()
+    {
+        // Adjust alpha of filter based on how many are infected or dead
+        InfectedFilter.GetComponent<Image>().color = new Color(1, 0, 0, PercentInfected);
+        DeadFilter.GetComponent<Image>().color = new Color(0, 0, 0, PercentDead);
+    }
+
     private void UpdateStats()
     {
-        deadBuildUp += infected * severity;
+        // Calc amount that have died
+        deadBuildUp += (infected * 1f) * severity;
+        Debug.Log("deadBuildUp = " + deadBuildUp);
         if (deadBuildUp >= 1f)
         {
             dead += (int)deadBuildUp;
+            infected -= (int)deadBuildUp;
             while (deadBuildUp > 1f)
             {
                 deadBuildUp -= 1f;
             }
         }
-        infectedBuildUp += infected * infectiousness;
+        // Calc amount of new infected
+        infectedBuildUp += (infected * 1f) * infectiousness;
+        Debug.Log("infectedBuildUp = " + infectedBuildUp);
         if (infectedBuildUp >= 1f)
         {
             infected += (int)infectedBuildUp;
@@ -55,7 +67,9 @@ public class SubInfector : MonoBehaviour
                 infectedBuildUp -= 1f;
             }
         }
-        decayBuildUp += infected * decay;
+        // Calc amount that have recovered
+        decayBuildUp += (infected * 1f) * decay;
+        Debug.Log("decayBuildUp = " + decayBuildUp);
         if (decayBuildUp >= 1f)
         {
             infected -= (int)decayBuildUp;
@@ -64,22 +78,47 @@ public class SubInfector : MonoBehaviour
                 decayBuildUp -= 1f;
             }
         }
+        // Calc who is vulnerable
         susceptible = population - (infected + dead + cured);
+        Debug.Log("infected = " + infected);
+        Debug.Log("dead = " + dead);
+        Debug.Log("susceptible = " + susceptible);
+        Debug.Log("cured = " + cured);
     }
     private void UpdatePercents()
     {
-        PercentSusceptible = susceptible / population;
-        PercentInfected = infected / population;
-        PercentDead = dead / population;
-        PercentCured = cured / population;
+        // Update the percents by dividing by the population multiplied by 1f
+        PercentSusceptible = susceptible / (population * 1f);
+        PercentInfected = infected / (population * 1f);
+        PercentDead = dead / (population * 1f);
+        PercentCured = cured / (population * 1f);
+        // Make sure all values cap at 1f
+        if (PercentSusceptible > 1f)
+        {
+            PercentSusceptible = 1f;
+        }
+        if (PercentInfected > 1f)
+        {
+            PercentInfected = 1f;
+        }
+        if (PercentDead > 1f)
+        {
+            PercentDead = 1f;
+        }
+        if (PercentCured > 1f)
+        {
+            PercentCured = 1f;
+        }
     }
     internal void SetValues(int i)
     {
+        // Set the infected value
         infected = i;
     }
 
     internal void StartValues(float i, float d, float s)
     {
+        // Set the start values for the difficulty
         infectiousness = i;
         decay = d;
         severity = s;

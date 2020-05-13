@@ -18,7 +18,6 @@ public class Infection : MonoBehaviour
     [SerializeField] RectTransform CuredBar;
     [SerializeField] private int susceptible = 0;
     [SerializeField] private int infected = 0;
-    private float infectedBuildUp = 0f;
     [SerializeField] private int dead = 0;
     [SerializeField] private int cured = 0;
     private float infectiousness;
@@ -56,9 +55,11 @@ public class Infection : MonoBehaviour
             severity = 0.04f;
             for (int i = 0; i < Regions.Length; i++)
             {
+                // Set all base values
                 Regions[i].StartValues(infectiousness, decay, severity);
             }
         }
+        // Set start infected
         Regions[startRegion].SetValues(infected);
     }
 
@@ -72,10 +73,12 @@ public class Infection : MonoBehaviour
 
     private void UpdatePercents()
     {
-        PercentSusceptible = susceptible / population;
-        PercentInfected = infected / population;
-        PercentDead = dead / population;
-        PercentCured = cured / population;
+        // Update the percents by dividing by the population multiplied by 1f
+        PercentSusceptible = susceptible / (population * 1f);
+        PercentInfected = infected / (population * 1f);
+        PercentDead = dead / (population * 1f);
+        PercentCured = cured / (population * 1f);
+        // Make sure all values cap at 1f
         if (PercentSusceptible > 1f)
         {
             PercentSusceptible = 1f;
@@ -121,12 +124,12 @@ public class Infection : MonoBehaviour
         int R5Hlthy = Regions[4].GetHealthy();
         int R5Ded = Regions[4].GetDead();
         int R5Crd = Regions[4].GetCured();
-
+        // Add all the values to get the country values
         int infctd = R1Infctd+ R2Infctd+ R3Infctd+ R4Infctd+ R5Infctd;
         int hlthy = R1Hlthy + R2Hlthy + R3Hlthy + R4Hlthy + R5Hlthy;
         int ded = R1Ded + R2Ded + R3Ded + R4Ded + R5Ded;
         int crd = R1Crd + R2Crd + R3Crd + R4Crd + R5Crd;
-
+        // Set values
         infected = infctd;
         susceptible = hlthy;
         dead = ded;
