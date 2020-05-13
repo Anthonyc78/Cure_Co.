@@ -27,10 +27,18 @@ public class SubInfector : MonoBehaviour
     {
         infectedBuildUp += infected * infectiousness;
         infected = (int)infectedBuildUp;
+        UpdatePercents();
         InfectedFilter.GetComponent<Image>().color = new Color (1, 0, 0, PercentInfected);
         DeadFilter.GetComponent<Image>().color = new Color (0, 0, 0, PercentDead);
     }
 
+    private void UpdatePercents()
+    {
+        PercentSusceptible = susceptible / population;
+        PercentInfected = infected / population;
+        PercentDead = dead / population;
+        PercentCured = cured / population;
+    }
     internal void SetValues(int i)
     {
         infected = i;
