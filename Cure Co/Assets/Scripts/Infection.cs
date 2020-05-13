@@ -8,19 +8,19 @@ public class Infection : MonoBehaviour
     [SerializeField] [Range(1, 3)] int difficulty = 1;
     [SerializeField] int population = 328400000;
     [SerializeField] private SubInfector[] Regions;
-    [Range(0f, 1f)] private float PercentSusceptible = 0f;
+    [SerializeField] [Range(0f, 1f)] private float PercentSusceptible = 0f;
     [SerializeField] RectTransform HealthyBar;
-    [Range(0f, 1f)] private float PercentInfected = 0f;
+    [SerializeField] [Range(0f, 1f)] private float PercentInfected = 0f;
     [SerializeField] RectTransform InfectedBar;
-    [Range(0f, 1f)] private float PercentDead = 0f;
+    [SerializeField] [Range(0f, 1f)] private float PercentDead = 0f;
     [SerializeField] RectTransform DeadBar;
-    [Range(0f, 1f)] private float PercentCured = 0f;
+    [SerializeField] [Range(0f, 1f)] private float PercentCured = 0f;
     [SerializeField] RectTransform CuredBar;
-    private int susceptible = 0;
-    private int infected = 0;
+    [SerializeField] private int susceptible = 0;
+    [SerializeField] private int infected = 0;
     private float infectedBuildUp = 0f;
-    private int dead = 0;
-    private int cured = 0;
+    [SerializeField] private int dead = 0;
+    [SerializeField] private int cured = 0;
     private float infectiousness;
     private float decay;
     private float severity;
@@ -32,10 +32,7 @@ public class Infection : MonoBehaviour
         {
             // Starting stats of normal
             PercentInfected = UnityEngine.Random.Range(0.01f, 0.02f);
-            PercentSusceptible = 1 - PercentInfected;
             infected = (int)(population * PercentInfected);
-            infectedBuildUp = infected;
-            susceptible = (int)(population * PercentSusceptible);
             infectiousness = 0.025f;
             decay = 0.0125f;
             severity = 0.01f;
@@ -44,10 +41,7 @@ public class Infection : MonoBehaviour
         {
             // Starting stats of hard
             PercentInfected = UnityEngine.Random.Range(0.02f, 0.05f);
-            PercentSusceptible = 1 - PercentInfected;
             infected = (int)(population * PercentInfected);
-            infectedBuildUp = infected;
-            susceptible = (int)(population * PercentSusceptible);
             infectiousness = 0.05f;
             decay = 0.0125f;
             severity = 0.02f;
@@ -56,10 +50,7 @@ public class Infection : MonoBehaviour
         {
             // Starting stats of epidemic
             PercentInfected = UnityEngine.Random.Range(0.05f, 0.1f);
-            PercentSusceptible = 1 - PercentInfected;
             infected = (int)(population * PercentInfected);
-            infectedBuildUp = infected;
-            susceptible = (int)(population * PercentSusceptible);
             infectiousness = 0.1f;
             decay = 0.0125f;
             severity = 0.04f;
@@ -85,6 +76,22 @@ public class Infection : MonoBehaviour
         PercentInfected = infected / population;
         PercentDead = dead / population;
         PercentCured = cured / population;
+        if (PercentSusceptible > 1f)
+        {
+            PercentSusceptible = 1f;
+        }
+        if (PercentInfected > 1f)
+        {
+            PercentInfected = 1f;
+        }
+        if (PercentDead > 1f)
+        {
+            PercentDead = 1f;
+        }
+        if (PercentCured > 1f)
+        {
+            PercentCured = 1f;
+        }
     }
 
     private void UpdateValues()

@@ -13,25 +13,59 @@ public class SubInfector : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] private float PercentDead = 0f;
     [SerializeField] GameObject DeadFilter;
     [Range(0f, 1f)] private float PercentCured = 0f;
-    private int susceptible = 0;
-    private int infected = 0;
+    [SerializeField] private int susceptible = 0;
+    [SerializeField] private int infected = 0;
     private float infectedBuildUp = 0f;
-    private int dead = 0;
-    private int cured = 0;
+    [SerializeField] private int dead = 0;
+    private float deadBuildUp = 0f;
+    [SerializeField] private int cured = 0;
     private float infectiousness;
     private float decay;
+    private float decayBuildUp = 0f;
     private float severity;
-
+    void Start()
+    {
+        susceptible = population;
+    }
     // Update is called once per frame
     void Update()
     {
-        infectedBuildUp += infected * infectiousness;
-        infected = (int)infectedBuildUp;
+        UpdateStats();
         UpdatePercents();
         InfectedFilter.GetComponent<Image>().color = new Color (1, 0, 0, PercentInfected);
         DeadFilter.GetComponent<Image>().color = new Color (0, 0, 0, PercentDead);
     }
-
+    private void UpdateStats()
+    {
+        deadBuildUp += infected * severity;
+        if (deadBuildUp >= 1f)
+        {
+            dead += (int)deadBuildUp;
+            while (deadBuildUp > 1f)
+            {
+                deadBuildUp -= 1f;
+            }
+        }
+        infectedBuildUp += infected * infectiousness;
+        if (infectedBuildUp >= 1f)
+        {
+            infected += (int)infectedBuildUp;
+            while (infectedBuildUp > 1f)
+            {
+                infectedBuildUp -= 1f;
+            }
+        }
+        decayBuildUp += infected * decay;
+        if (decayBuildUp >= 1f)
+        {
+            infected -= (int)decayBuildUp;
+            while (decayBuildUp > 1f)
+            {
+                decayBuildUp -= 1f;
+            }
+        }
+        susceptible = population - (infected + dead + cured);
+    }
     private void UpdatePercents()
     {
         PercentSusceptible = susceptible / population;

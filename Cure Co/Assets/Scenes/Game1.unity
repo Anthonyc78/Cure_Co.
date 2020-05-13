@@ -3167,7 +3167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficulty: 1
-  population: 1000000
+  population: 328400000
   Regions:
   - {fileID: 72501356}
   - {fileID: 1865664075}
